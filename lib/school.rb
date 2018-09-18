@@ -1,10 +1,12 @@
 # code here!
 class School
-  attr_accessor :roster
+  attr_accessor :roster # The roster needs to be mutable.  That's why you use an attr_accessor instead of an attr_reader.
   attr_reader :name
-  def initialize(school_name)
+#  def initialize(school_name) 
+    def initialize(school_name, roster = {})
     @school_name = school_name
-    @roster = {}
+#    @roster = {} 
+    @roster = roster 
   end 
   
   def roster
