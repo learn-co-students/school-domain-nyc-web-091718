@@ -1,4 +1,3 @@
-# code here!
 class School
   attr_accessor :roster # The roster needs to be mutable.  That's why you use an attr_accessor instead of an attr_reader.
   attr_reader :name
@@ -7,6 +6,7 @@ class School
     @school_name = school_name
 #    @roster = {} 
     @roster = roster 
+    #Either of the above ways of initializing the school with an empty roster works: both the commented-out way and the non-commented-out way.
   end 
   
   def roster
