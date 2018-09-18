@@ -26,5 +26,19 @@ class School
     end 
   end 
   
-end 
- 
+  def grade(grade)
+    @roster[grade]
+  end 
+  
+  # # key order does not matter; this is testing that the students in each respective value are in alphabetical order
+  #     expect(@school.sort).to eq({7 => ["Blake Johnson", "Jack Bauer"], 9 => ["Bart Simpson", "Homer Simpson"], 10 => ["Avi Flombaum", "Jeff Baird"]})
+  
+  def sort
+    new_roster = {} 
+    @roster.map do |grade, student_array|
+       new_roster[grade] = student_array.sort
+    end 
+    new_roster
+  end 
+  
+end
